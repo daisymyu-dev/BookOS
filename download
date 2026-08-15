@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.pyc
+.DS_Store
+.env
+
+# Keep personal reading data and generated derivatives out of public commits.
+books/*.md
+!books/sample-book.md
+outputs/

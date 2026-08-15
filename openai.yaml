@@ -1,0 +1,4 @@
+interface:
+  display_name: "BookOS"
+  short_description: "Turn books into reusable insight and action systems"
+  default_prompt: "Use $bookos to turn a book into reusable models, human insights, and action principles."
