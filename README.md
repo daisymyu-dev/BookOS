@@ -118,6 +118,23 @@ The shared template keeps these sections together:
 - 行动清单
 - 相关主题标签
 
+## Verify a Fresh Checkout
+
+Run the regression tests and generate the sample outputs:
+
+```bash
+python -m unittest discover -s tests -v
+python bookos.py all
+```
+
+Confirm that private notes, generated outputs, and local environment files are ignored:
+
+```bash
+git check-ignore -v books/private-note.md outputs/index.md .env
+```
+
+The command should report a matching `.gitignore` rule for all three paths.
+
 ## Privacy
 
 Book notes can contain sensitive personal reflections. By default, `.gitignore` keeps new files in `books/` and everything generated in `outputs/` out of public commits while retaining the anonymous sample note. Review ignored and staged files before publishing a fork.
